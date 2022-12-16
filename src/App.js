@@ -1,9 +1,17 @@
+import './App.scss'
+import { Routes, Route } from 'react-router-dom';
+import LoginView from "./pages/LoginView";
+import Home from './pages/Home';
 
 function App() {
   return (
-    <div>
-        <h1>Hello! Developers</h1>
-    </div>
+    <>
+      <Routes>
+        <Route path='/' element={ <Home /> } />
+        <Route path='/login' element={ <LoginView /> } />
+      </Routes>
+  
+    </>
   );
 }
 

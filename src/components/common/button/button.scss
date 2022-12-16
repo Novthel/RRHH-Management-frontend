@@ -1,0 +1,20 @@
+@use "../../../scss/" as *;
+
+
+.btn-submit {
+    background-color: $background-btn-form;
+    border: none;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 34px;
+    color: #FFFBFB;
+    cursor: pointer;
+
+}
+
+@media (max-width: 376px) { 
+    .btn-submit {
+        font-size: 0.8rem;
+    }
+}
