@@ -1,0 +1,52 @@
+@use "../../scss/" as *;
+
+.container-form {
+    @include flex(center, none);
+    flex-direction: column;
+    padding: 2rem;
+    color: $color-text-form;
+    font-style: normal;
+    gap: 1rem;
+    legend {
+        @include format-font(700, 2rem, 48px );
+        text-align: center;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    span {
+        @include format-font(400, 1rem, 34px );
+    }
+    input {
+        background: $background-input;
+        outline: none;
+       
+    }
+    .check-remember {
+        @include format-font(400, 0.8rem, 29px );
+        span {
+            margin-left: 0.4rem;
+        }
+    }
+    .text-msg {
+        @include format-font(400, 1rem, 16px );
+        text-align: center;
+        margin-top: 1rem;
+        color: $color-text-form-question;
+    }
+}
+
+@media (max-width: 376px) { 
+    .container-form {
+        legend {
+            @include format-font(700, 1.5rem, 48px );
+        }
+        span {
+            @include format-font(400, 0.9rem, 34px );
+        }
+        .check-remember {
+            @include format-font(400, 0.7rem, 29px );
+        }
+        .text-msg {
+            @include format-font(400, 0.9rem, 16px );
+        }
+    }
+}
